@@ -16,6 +16,7 @@ cd / cd ~ / cd $home = changes directory to home directory such as "/home/studen
 
 touch -t ccyymmddhhmm.ss file.txt = changes file time
 touch -r = replaces file time with other file time
+touch /test/count/{1..10}.txt = creates 1.txt, 2.txt, all the way to, 10.txt
 
 mkdir = created directory
 mkdir -p folder/subfolder = allows nesting a folder within a folder
@@ -31,11 +32,20 @@ echo "text" > myfile = adds "text" to the myfile
 
 more/tail/less/cat/head = all view contents of a file
 
-find . -iname downloads = finds case insensitive directories/files with the word downloads
-find / -inum 38 2>/dev/null = removes all permission denied and finds files with inode number 38
-find . -size 10c = in this directory (.), less than 10 bytes
-find / -user student = directories and files ownedby user
-find / -maxdepth 2 -type d = max depth of 2, and only directories (type d)
-find / -name *.txt = finds all .txt's
-find / -empty = shows directories and files that are empty
-find / -size 0 = shows only files that are empty
+find / -type f = finds files
+  find / -inum 38 2>/dev/null = removes all permission denied and finds files with inode number 38
+      find / -user student = directories and files ownedby user
+        find / -maxdepth 2 -type d = max depth of 2, and only directories (type d)
+          find / -name *.txt = finds all .txt's
+            find / -empty = shows directories and files that are empty
+              find . -size 10c = in this directory *(.)*, less than 10 bytes
+            find / -size 0 = shows only files that are empty  
+          find / -atime 3 = access'd in the last 3 days (-amin)
+        find / -ctime 3 = created in the last 3 days (-cmin)
+      find / -mtime 3 = modified in the last 3 days (-mmin)
+    find / -cmin -30 = created in the last 30 minutes
+  find / -executable ! -type d = finds all executeables, excluding directories.
+find / -type d -iname log -exec ls -l {} \; 2>/dev/null = finds all directories, with a case insensitive "log", and executes ls -l
+  find /var/log -iname *.log -exec ls -al {} \; = finds all files/directories ending in .log and executes ls -al. All inside /var/log. 
+    find /var/log -iname *.log 2>/dev/null -printf "%i %f\n" = prints the inode number and file name
+   
