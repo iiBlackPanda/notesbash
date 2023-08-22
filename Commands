@@ -63,3 +63,7 @@ ps --forest = shows parent-child format
 
 kill -9 <PID> = terminates forcefully
 
+more /etc/passwd | cut -d: -f1= No spacing after d, instantly delimitater (-d!), field 1 (no space)
+                   cut -d: -f3- = shows the third field and everything after (-),(f2-5)shows two through 5, (-f1,3) 1 and 3
+
+
