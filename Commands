@@ -1,6 +1,10 @@
+bash
+
+history = displays history
 Ctrl - R = Reverse Search
 Ctrl - A = Beginning
 Ctrl - E = End
+Man Page = (g = top of page)
 /verbose = looks for verbose (n goes to the next find) ((this is in a man page))
 pwd = Present Working Directory
 cd / cd ~ / cd $home = changes directory to home directory such as "/home/student"
@@ -10,3 +14,6 @@ mkdir = created directory
 mkdir -p folder/subfolder = allows nesting a folder within a folder
 rmdir -p folder/subfolder = removes folder and parent folder
 rm -rf = removes folder and everything under it
+ln -s <source file> <target file>= creates a symbolic link
+ln <source file> <target file> = creates a hard link 
+echo "text" > myfile = adds "text" to the myfile
