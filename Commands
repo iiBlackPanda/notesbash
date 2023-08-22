@@ -45,10 +45,10 @@ find / -type f = finds files
               find / -ctime 3 = created in the last 3 days (-cmin)
             find / -mtime 3 = modified in the last 3 days (-mmin)
           find / -cmin -30 = created in the last 30 minutes
-      find / -executable ! -type d = finds all executeables, excluding directories.
-    find / -type d -iname log -exec ls -l {} \; 2>/dev/null = finds all directories, with a case insensitive "log", and executes ls -l
-  find /var/log -iname *.log -exec ls -al {} \; = finds all files/directories ending in .log and executes ls -al. All inside /var/log. 
-find /var/log -iname *.log 2>/dev/null -printf "%i %f\n" = prints the inode number and file name
+        find / -executable ! -type d = finds all executeables, excluding directories.
+      find / -type d -iname log -exec ls -l {} \; 2>/dev/null = finds all directories, with a case insensitive "log", and executes ls -l
+    find /var/log -iname *.log -exec ls -al {} \; = finds all files/directories ending in .log and executes ls -al. All inside /var/log. 
+  find /var/log -iname *.log 2>/dev/null -printf "%i %f\n" = prints the inode number and file name
    
 cat /etc/passwd |   grep /bin/bash = specifies /bin/bash
                     egrep "student|root|randomuser" /etc/passwd = finds anything with root,student,or randomuser
@@ -63,7 +63,16 @@ ps --forest = shows parent-child format
 
 kill -9 <PID> = terminates forcefully
 
-more /etc/passwd | cut -d: -f1= No spacing after d, instantly delimitater (-d!), field 1 (no space)
+more /etc/passwd | cut -d: -f1= No spacing after d, instantly delimitater (-d!), field 1 (no space) 
                    cut -d: -f3- = shows the third field and everything after (-),(f2-5)shows two through 5, (-f1,3) 1 and 3
+                   cut -c3-10 = 3-10 characters
+more /etc/passwd | cut -d- -f1- -s = the (-s) removes everything that does not have the (-) delimiter
+                   cut -f2 --complement = shows everything but field 2
 
+&ping google = pings google in the background (& = background)
+; = allows to run multiple commands on the same line
+&& = logical "and"operator
+|| = logical "or" operator
+> = sends output to a file,if file exists it will be overwritten
+>> = appends output to a file
 
