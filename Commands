@@ -3,9 +3,7 @@ bash
 history = displays history
 
 Ctrl - R = Reverse Search
-
 Ctrl - A = Beginning
-
 Ctrl - E = End
 
 Man Page = (g = top of page)
@@ -17,11 +15,9 @@ pwd = Present Working Directory
 cd / cd ~ / cd $home = changes directory to home directory such as "/home/student"
 
 touch -t ccyymmddhhmm.ss file.txt = changes file time
-
 touch -r = replaces file time with other file time
 
 mkdir = created directory
-
 mkdir -p folder/subfolder = allows nesting a folder within a folder
 
 rmdir -p folder/subfolder = removes folder and parent folder
@@ -29,7 +25,6 @@ rmdir -p folder/subfolder = removes folder and parent folder
 rm -rf = removes folder and everything under it
 
 ln -s <source file> <target file>= creates a symbolic link
-
 ln <source file> <target file> = creates a hard link 
 
 echo "text" > myfile = adds "text" to the myfile
@@ -37,4 +32,10 @@ echo "text" > myfile = adds "text" to the myfile
 more/tail/less/cat/head = all view contents of a file
 
 find . -iname downloads = finds case insensitive directories/files with the word downloads
-
+find / -inum 38 2>/dev/null = removes all permission denied and finds files with inode number 38
+find . -size 10c = in this directory (.), less than 10 bytes
+find / -user student = directories and files ownedby user
+find / -maxdepth 2 -type d = max depth of 2, and only directories (type d)
+find / -name *.txt = finds all .txt's
+find / -empty = shows directories and files that are empty
+find / -size 0 = shows only files that are empty
