@@ -17,6 +17,7 @@ cd / cd ~ / cd $home = changes directory to home directory such as "/home/studen
 touch -t ccyymmddhhmm.ss file.txt = changes file time
 touch -r = replaces file time with other file time
 touch /test/count/{1..10}.txt = creates 1.txt, 2.txt, all the way to, 10.txt
+touch /test/count/{A..D}.txt = creats A.txt, B.txt, all the way to D.txt
 
 mkdir = created directory
 mkdir -p folder/subfolder = allows nesting a folder within a folder
