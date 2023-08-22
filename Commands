@@ -1,11 +1,12 @@
 Ctrl - R = Reverse Search
 Ctrl - A = Beginning
 Ctrl - E = End
-/verbose = looks for verbose (n goes to the next find)
-Pwd = Present Working Directory
+/verbose = looks for verbose (n goes to the next find) ((this is in a man page))
+pwd = Present Working Directory
 cd / cd ~ / cd $home = changes directory to home directory such as "/home/student"
 touch -t ccyymmddhhmm.ss file.txt = changes file time
 touch -r = replaces file time with other file time
 mkdir = created directory
-mkdir -p = allows nesting a folder within a folder
-
+mkdir -p folder/subfolder = allows nesting a folder within a folder
+rmdir -p folder/subfolder = removes folder and parent folder
+rm -rf = removes folder and everything under it
