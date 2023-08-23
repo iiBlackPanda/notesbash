@@ -24,6 +24,8 @@ sed -e '/xrdp/d' -e '/telnet/d' passwd = deletes telnet and xrdp, the entire lin
 alias vim='nano' -> vim newfile -> runs nano newfile
 unalias vim = resets
 
+
+
                   CONDITIONS
 -e = file exists
 -f = file exists and is a regular file
