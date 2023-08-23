@@ -22,6 +22,7 @@ sed '/home/d' passwd = deletes every instance of the word home in passwd
 sed -e '/xrdp/d' -e '/telnet/d' passwd = deletes telnet and xrdp, the entire lines that contain that. -e makes entire line go bye bye
 
 alias vim='nano' -> vim newfile -> runs nano newfile
+unalias vim = resets
 
                   CONDITIONS
 -e = file exists
