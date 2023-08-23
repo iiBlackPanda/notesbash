@@ -1,0 +1,5 @@
+tail passwd | awk -f: '{print $1}' = prints field one and three, delimitater is the ':'
+              awk -F: '{prit $NF}' = prints the last field and only the last field
+              awk -f: 'BEGIN {OFS=":"}{print$1,$3,$6)
+cat passwd |  awk -F: '($3 >0 150){print $0}
+              awk -v myvar=$(sed -i 's/root/groot/g' $HOME/passwd) -F: 'OFS=":"}{$1=myvar; print}'
