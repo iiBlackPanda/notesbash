@@ -12,3 +12,11 @@ Using ONLY sed, write all lines from $HOME/passwd into $HOME/PASS/passwd.txt tha
     Find all dmesg kernel messages that contain CPU or BIOS (uppercase) in the string, but not usable or reserved (case-insensitive)
     Print only the msg itself, omitting the bracketed numerical expressions ie: [1.132775]
         ANSWER : dmesg | grep 'CPU\|BIOS' | grep -iv 'usable\|reserved' |cut -d] -f2-
+
+
+
+    Using ONLY the awk command, write a BASH one-liner script that extracts ONLY the names of all the system and user accounts that are not UIDs 0-3.
+    Only display those that use /bin/bash as their default shell.
+    The input file is named $HOME/passwd and is located in the current directory.
+    Output the results to a file called $HOME/SED/names.txt
+            ANSWER = cat passwd | awk -F: '($3 > 3){print $0}' | awk -F: '($NF == "/bin/bash"){print $1}' > $HOME/SED/names.txt
