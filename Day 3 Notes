@@ -13,3 +13,5 @@ $_ = Last argument provided to previous command
 $$ = PID of current shell
 $- = Flags that are set
 $! = Process ID of the most recent background job
+
+md5sum = 
