@@ -19,8 +19,8 @@ done = 1-10 and x=11
 ========================
 x=0
 while true; do
-if [[ $x -gt 10 ]] ; then
-break
-fi
-echo $x
-x=$(($x+1))
+  if [[ $x -gt 10 ]] ; then
+    break
+  fi
+  echo $x
+  x=$(($x+1))
