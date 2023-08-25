@@ -14,8 +14,8 @@ A=$(cat /etc/passwd) -> echo $A -> executes command
 
 B='cat /etc/passwd' -> echo $B -> stored as a string
 
-sed 's/home/nobodyhome/' passwd  = replaces home with nobody home, s = substitute
-sed 's/home/nobodyhome/g' passwd = g makes it global
+sed 's/home/nobodyhome/' passwd  =  replaces home with nobody home, s = substitute
+sed 's/home/nobodyhome/g' passwd = -g makes it global
                                  = -i actually changes the file
 sed 's/\/bin\/bash\/been\/better/g' passwd = 
 sed '/home/d' passwd = deletes every instance of the word home in passwd
