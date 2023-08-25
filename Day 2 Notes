@@ -9,18 +9,18 @@ cat sort.txt | awk -F: '{print $1}' | sort = sorts on the first field and prints
 
                                     | uniq = does nothing unless done AFTER SORT
                                     | uniq -c = gives a count on how many of what is found
-
+*******************************************************************************************************************************************
 A=$(cat /etc/passwd) -> echo $A -> executes command
 
 B='cat /etc/passwd' -> echo $B -> stored as a string
 
-sed 's/home/nobodyhome/' passwd = replaces home with nobody home, s = substitute
+sed 's/home/nobodyhome/' passwd  = replaces home with nobody home, s = substitute
 sed 's/home/nobodyhome/g' passwd = g makes it global
-                                  = -i actually changes the file
+                                 = -i actually changes the file
 sed 's/\/bin\/bash\/been\/better/g' passwd = 
 sed '/home/d' passwd = deletes every instance of the word home in passwd
 sed -e '/xrdp/d' -e '/telnet/d' passwd = deletes telnet and xrdp, the entire lines that contain that. -e makes entire line go bye bye
-
+*******************************************************************************************************************************************
 alias vim='nano' -> vim newfile -> runs nano newfile
 unalias vim = resets
 
