@@ -1,0 +1,10 @@
+for x in {1..10}; do ->echo $x -> done = 1\n2\n3..\n10
+
+for x in $(cat ips.txt); do - > echo $x -> done = displays the cat of the file (for loops make every space a new line)
+
+nano commands
+#!/bin/bash
+for x in $(cat /etc/passwd | awk -F: '{print $1}')
+  do echo $x is a user on this system
+done - ctrl-x
+chmod 777 commands
