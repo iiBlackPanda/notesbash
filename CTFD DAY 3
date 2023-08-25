@@ -5,7 +5,7 @@
     You may need to sort the output depending on the command(s) you use. Have each path displayed only once.
             ANSWER = find $HOME -type f -name "*.bin" -exec dirname {} \; | sort -u
 
-
+*******************************************************************************************************************************************
 
     Write a script which will copy the last entry/line in the passwd-like file specified by the $1 positional parameter
     Modify the copied line to change:
@@ -25,6 +25,7 @@
                             new_line=$(IFS=':'; echo "${fields[*]}")
                             echo "$new_line" >> "$1"
 
+*******************************************************************************************************************************************
     Find all executable files under the following four directories:
         /bin
         /sbin
@@ -36,7 +37,7 @@
                             tenth_file=${sorted_files[9]}
                             md5sum $tenth_file | cut -d' ' -f1
 
-
+*******************************************************************************************************************************************
     Sort the /etc/passwd file numerically by the GID field.
     For the 10th entry in the sorted passwd file, get an md5 hash of that entry’s home directory.
     Output ONLY the MD5 hash of the directory's name to standard output.
