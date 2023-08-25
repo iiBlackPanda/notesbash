@@ -25,4 +25,29 @@
                             new_line=$(IFS=':'; echo "${fields[*]}")
                             echo "$new_line" >> "$1"
 
+    Find all executable files under the following four directories:
+        /bin
+        /sbin
+        /usr/bin
+        /usr/sbin
+    Sort the filenames with absolute path, and get the md5sum of the 10th file from the top of the list.
+                ANSWER =    files=$(find /bin /sbin /usr/bin /usr/sbin -executable -type f)
+                            sorted_files=($(echo "$files" | tr ' ' '\n' | sort))
+                            tenth_file=${sorted_files[9]}
+                            md5sum $tenth_file | cut -d' ' -f1
+
+
+    Sort the /etc/passwd file numerically by the GID field.
+    For the 10th entry in the sorted passwd file, get an md5 hash of that entry’s home directory.
+    Output ONLY the MD5 hash of the directory's name to standard output.
+                        ANSWER = sorted_pw=$(sort -t: -k4n /etc/passwd)
+                                tenth=$(echo "$sorted_pw" | sed -n '10p')
+                                homedir=$(echo "$tenth" | cut -d: -f6) 
+                                mdhash=$(echo -n "$homedir" | cut -d' ' -f1) 
+                                A=$(echo "$mdhash" | md5sum | cut -d- -f1)
+                                echo $A
+
+
+
+
 
