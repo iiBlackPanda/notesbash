@@ -24,7 +24,13 @@
                             fields[6]="/bin/bash" # Default shell
                             new_line=$(IFS=':'; echo "${fields[*]}")
                             echo "$new_line" >> "$1"
-
+=================================TEACHERS WAY===========================================
+                        name=$2
+                        uid=$3
+                        file=$1
+                        base=$(tail -1 $file
+                        echo $base |awk -f: -v "awkname=$name" -v "awkuid=$uid" 'BEGIN {OFS=":"} {$1=awkname} {$3=awkuid} {$4=awkuid} {$6="/home/"awkname} {$NF="/bin/bash"} {print$0}' >> $file
+ ========================================================================================                           
 *******************************************************************************************************************************************
     Find all executable files under the following four directories:
         /bin
