@@ -24,3 +24,8 @@ while true; do
   fi
   echo $x
   x=$(($x+1))
+=========================
+ip route
+which
+tar
+zip
