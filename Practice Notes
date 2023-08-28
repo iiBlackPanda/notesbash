@@ -17,3 +17,5 @@ find -iname
 find -inum
 find -maxdepth
 find -exec <command> <options> {} '\;' -or- '+'
+
+awk -F: '{print $x}' (Default Delimiter is Space)
