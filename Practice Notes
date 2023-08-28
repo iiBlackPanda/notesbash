@@ -10,3 +10,5 @@ grep -a = changes things to binary text
 grep -b = shows everything before
 grep -f = shows files
 grep -r = recursive {examples: grep -'options' /file/path
+
+find
