@@ -11,4 +11,9 @@ grep -b = shows everything before
 grep -f = shows files
 grep -r = recursive {examples: grep -'options' /file/path
 
-find
+find -name
+find -type
+find -iname
+find -inum
+find -maxdepth
+find -exec <command> <options> {} '\;' -or- '+'
