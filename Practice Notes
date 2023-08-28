@@ -37,3 +37,9 @@ elif [[ $var -le 999 ]]; then
 else
   echo "Not a number"
 fi
+
+
+
+
+
+find $dirpath -maxtype f -mmin 60 -print0 | sort | while read -r -d '' line; do echo "$line"; done
