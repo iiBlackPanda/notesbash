@@ -1,3 +1,12 @@
 find
 touch
 all of the file system commands
+
+grep -v = inverts results and outputs to screen (everything but what that is)
+grep -i = case insensitive
+grep -E = allows to grep for regex
+grep -c = lines above and below (context)
+grep -a = changes things to binary text
+grep -b = shows everything before
+grep -f = shows files
+grep -r = recursive {examples: grep -'options' /file/path
