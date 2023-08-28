@@ -56,10 +56,10 @@ ps --forest = shows parent-child format
 kill -9 <PID> = terminates forcefully
 *******************************************************************************************************************************************
  cut -d: -f1= No spacing after d, instantly delimitater (-d!), field 1 (no space) 
-                   cut -d: -f3- = shows the third field and everything after (-),(f2-5)shows two through 5, (-f1,3) 1 and 3
-                   cut -c3-10 = 3-10 characters
+ cut -d: -f3- = shows the third field and everything after (-),(f2-5)shows two through 5, (-f1,3) 1 and 3
+ cut -c3-10 = 3-10 characters
  cut -d- -f1- -s = the (-s) removes everything that does not have the (-) delimiter
-                   cut -f2 --complement = shows everything but field 2
+cut -f2 --complement = shows everything but field 2
 *******************************************************************************************************************************************
 &ping google = pings google in the background (& = background)
 ; = allows to run multiple commands on the same line
