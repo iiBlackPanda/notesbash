@@ -19,3 +19,21 @@ find -maxdepth
 find -exec <command> <options> {} '\;' -or- '+'
 
 awk -F: '{print $x}' (Default Delimiter is Space)
+
+wc -l
+
+sort -n
+
+tar -czf = creats a tar ball file
+
+if [[ <condition> ]]
+
+if [[ $var -le 9 ]]; then
+  echo "Single Digit"
+elif [[ $var -le 99 ]]; then
+  echo "Double Digit"
+elif [[ $var -le 999 ]]; then
+  echo "Triple Digit"
+else
+  echo "Not a number"
+fi
