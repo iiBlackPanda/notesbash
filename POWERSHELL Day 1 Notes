@@ -1,0 +1,66 @@
+xfreerdp /u:student /v:10.50.34.16 -dynamic-resolution +glyph-cache +clipboard
+extra notes : Can run external commands
+Some linux works.
+                          ******runs in order of alias,function,commandlet****
+=============================================================================================================
+                                        ****GET COMMANDS****
+Get-Command = Gets all commands
+Get-Command -Noun process = Gets all commands with the noun process
+Get-Command -Verb Get = Gets all get commands verbs
+Get-Verb = Gets all the verbs
+Get-Process = Basically tasklist, lists all process's
+Get-Eventlog -LogName Security -ComputerName server -verbose
+Get-Variable = Shows all variables
+(Get-Process).GetType() = Shows Get-Process's type, such as an array/value/e.t.c
+=============================================================================================================
+                                            ****HELP****
+***Get-Help = Before running Get-Help -> Update-Help -Force -ErrorAction SilentlyContinue***
+                    -showwindow = for a search bar.
+                    -online = pulls it up online, slightly better
+                    -*log* = looks up anything with the word log in it
+Get-Help about_* = shows every about file. (about files, show a lot more on the topic)
+=============================================================================================================
+                                            ****ALIAS****
+Get-Alias -Name dir = Get-Childitem
+Get-Alies -Name cls = Clear-Host
+Get-Alias -Name = Shows the alias and what it is in powershell
+Get-Alias -Definition Get-Childitem = Finds all alias's for get-childitem
+Set-Alias edit notepad.exe = anytime you type in edit, it opens notepad
+Remove-Item alias:edit = Removes the alias named edit
+=============================================================================================================
+                                            ****PROCESS****
+Get-Process | Get-Member = Shows all the methods and properties of process's 
+(Get-Process)[2] = Gets the second index on the process list
+(Get-Process)[10..15] = Gets the index's 10 - 15 on the process list
+((Get-Process)[44]).kill() = kills notepad process by the index value. ***kill() = needs the '()' to work.  
+=============================================================================================================
+                                            ****PIPELINE****
+Notes:Pipelines go one at a time, iterates it one at a time.
+$_ = Pipeline variable, Current Object in the pipleline
+Get-Service | Format-Table Name, Status = Puts only the Name and Status into a table,Only Name and Status.
+dir config.log | Rename-Item -NewName { "old_$($_.Name)" } = Adds 'old_' to the beginning of every file in config.log
+
+Write-Host = Writes it exactly as you put it, can not be sorted or configured through a pipeline
+Write-Output = Sortable,Configurable
+==============================================================================================================
+                                            ****VARIABLES****
+Get-Variable x = shows the value of variable
+del Variable:x <or> remove-Variable x = deletes the variable
+Test-Path variable:d
+Get-ChildItem env: = shows enviromental variables
+%env:HOMEPATH = Shows the homepath of current user
+
+Examples:
+$var1 = "jon"
+write-host "Hello $var1" = Hello jon, it uses the variable
+write-host 'Hello $var1' = Hello $var1, prints it exactly as seen
+
+$hour = (Get-Date).Hour
+$remain = 24 - $hour
+$remain      = It prints out the remaining hours of the day, '.Hour' is a property.
+
+$var = read-host; ([int32]$var).GetType()
+($var).GetType() -> $var is now a Int32, TYPECASTING
+
+$x, $y, $z = "this", "that", "third"
+=============================================================================================================
